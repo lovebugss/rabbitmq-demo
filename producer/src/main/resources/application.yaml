@@ -1,0 +1,13 @@
+spring:
+  rabbitmq:
+    host: 127.0.0.1
+    username: guest
+    password: guest
+    virtual-host: demo
+    publisher-confirm-type: simple
+    publisher-returns: true
+    listener:
+      simple:
+        retry:
+          enabled: true
+          max-attempts: 2
